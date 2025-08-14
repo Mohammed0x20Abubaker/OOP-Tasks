@@ -1,0 +1,13 @@
+Shallow copy
+A shallow copy of an object is a copy whose properties share the same references (point to the same underlying values) as those of the source object from which the copy was made. As a result, when you change either the source or the copy, you may also cause the other object to change too. That behavior contrasts with the behavior of a deep copy, in which the source and copy are completely independent.
+
+More formally, two objects o1 and o2 are shallow copies if:
+
+1.They are not the same object (o1 !== o2).
+2.The properties of o1 and o2 have the same names in the same order.
+3.The values of their properties are equal.
+4.Their prototype chains are equal.
+
+Deep copy in Python
+A deep copy creates a new compound object before inserting copies of the items found in the original into it in a recursive manner.
+It will first construct a new collection object and then recursively populate it with copies of the child objects found in the original. It means that any changes made to a copy of the object do not reflect in the original object. 
